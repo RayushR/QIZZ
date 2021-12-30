@@ -1,0 +1,178 @@
+
+<!Doctype html>
+<html>
+
+     <head>
+        <title>
+            QUESTION
+       </title>
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <script>
+                function check() {
+                    var c = 0;
+                    var q1 = document.quize.question1.value;
+                    var q2 = document.quize.question2.value;
+                    var q3 = document.quize.question3.value;
+                    var q4 = document.quize.question4.value;
+                    var q5 = document.quize.question5.value;
+                    if (q1 == "Hyper Text Markup Language") { c++ }
+                    if (q2 == "A link") { c++ }
+                    if (q3 == "container tag") { c++ }
+                    if (q4 == "BASE") { c++ }
+                    if (q5 == "white, black and gray") { c++ }
+                
+                    document.write("You have scored ", c);
+                }
+                
+                var mins = 2; //Set the number of minutes you need
+                var secs = mins * 60;
+                var currentSeconds = 0;
+                var currentMinutes = 0;
+                /* 
+                 * The following line has been commented out due to a suggestion left in the comments. The line below it has not been tested. 
+                 * setTimeout('Decrement()',1000);
+                 */
+                setTimeout(Decrement, 1000);
+                
+                function Decrement() {
+                    currentMinutes = Math.floor(secs / 60);
+                    currentSeconds = secs % 60;
+                    if (currentSeconds <= 9) currentSeconds = "0" + currentSeconds;
+                    secs--;
+                    document.getElementById("timerText").innerHTML = currentMinutes + ":" + currentSeconds; //Set the element id you need the time put into.
+                    if (secs !== -1) setTimeout('Decrement()', 1000);
+                }
+                </script>  <script>
+function check() {
+    var c = 0;
+    var q1 = document.quize.question1.value;
+    var q2 = document.quize.question2.value;
+    var q3 = document.quize.question3.value;
+    var q4 = document.quize.question4.value;
+    var q5 = document.quize.question5.value;
+    if (q1 == "Hyper Text Markup Language") { c++ }
+    if (q2 == "A link") { c++ }
+    if (q3 == "container tag") { c++ }
+    if (q4 == "BASE") { c++ }
+    if (q5 == "white, black and gray") { c++ }
+
+    document.write("You have scored ", c);
+}
+
+var mins = 2; //Set the number of minutes you need
+var secs = mins * 60;
+var currentSeconds = 0;
+var currentMinutes = 0;
+/* 
+ * The following line has been commented out due to a suggestion left in the comments. The line below it has not been tested. 
+ * setTimeout('Decrement()',1000);
+ */
+setTimeout(Decrement, 1000);
+
+function Decrement() {
+    currentMinutes = Math.floor(secs / 60);
+    currentSeconds = secs % 60;
+    if (currentSeconds <= 9) currentSeconds = "0" + currentSeconds;
+    secs--;
+    document.getElementById("timerText").innerHTML = currentMinutes + ":" + currentSeconds; //Set the element id you need the time put into.
+    if (secs !== -1) setTimeout('Decrement()', 1000);
+}
+</script>  
+<style>
+#quize1 {
+    position: absolute;
+    z-index: 15;
+    margin-top: 2%;
+    margin-left: 27%;
+    background-color: whitesmoke;
+    position: relative;
+    border-radius: 10px;
+    padding-left: 5%;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 40%;
+    overflow: hidden;
+    box-shadow: gray, 10px;
+}
+
+.body {
+    position: center;
+    padding-left: 25%;
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+}
+
+#btn {
+    position: relative;
+    width: 30%;
+    height: 25%;
+    margin-bottom: 15px;
+    margin-left: 30%;
+    margin-top: 5%;
+    border-radius: 10px;
+    color: black;
+    background: linear-gradient(to top left, #003399 0%, #00ffff 88%);
+}
+
+#timerText {
+    margin-left: 85%;
+    position: fixed;
+    font-size: 50px;
+}  
+ 
+
+
+          </style>
+</head>
+
+
+          <body style="background:linear-gradient(rbga (red, yellow ,orange ));">
+ 
+    <div id="timerText"></div>
+    <div id="quize1" class="quize2">
+        <form name="quize" id="quize">
+            <div>
+                <p>1. HTML is stand for?</p>
+                <p><input type="radio" name="question1" value="None of the above">A. None of the above</p>
+                <p><input type="radio" name="question1" value="Hyper Text Markup Language">B. Hyper Text Markup Language</p>
+                <p><input type="radio" name="question1" value="Holistick Technical Method Library">C. Holistick Technical Method Library</p>
+                <p><input type="radio" name="question1" value="Hyper Tax Makes Line">D. Hyper Tax Makes Line</p>
+            </div>
+
+            <div>
+                <p>2. Adding a border to your image helps the visitor to recognize it as what? </p>
+                <p><input type="radio" name="question2" value="A frame">A. A frame</p>
+                <p><input type="radio" name="question2" value="A link">B. A link</p>
+                <p><input type="radio" name="question2" value="A picture">C. A picture</p>
+                <p><input type="radio" name="question2" value="None of the above">D. None of the above</p>
+            </div>
+
+            <div>
+                <p>3. In HTML, tags that include both on and off tag are called?</p>
+                <p><input type="radio" name="question3" value="comment tag">A. comment tag </p>
+                <p><input type="radio" name="question3" value="document tag">B. document tag</p>
+                <p><input type="radio" name="question3" value="container tag">C. container tag</p>
+                <p><input type="radio" name="question3" value="None of the above">A. None of the above</p>
+            </div>
+
+            <div>
+                <p>4. A much better approach to establish the base URL is to use the element?</p>
+                <p><input type="radio" name="question4" value="HEAD">A. HEAD</p>
+                <p><input type="radio" name="question4" value="BODY">B. BODY</p>
+                <p><input type="radio" name="question4" value="BASE">C. BASE</p>
+                <p><input type="radio" name="question4" value="None of the above">D. None of the above</p>
+            </div>
+
+            <div>
+                <p>5. Which colors consist of equal amounts of all basic colors?</p>
+                <p><input type="radio" name="question5" value="white, blue and gray">A. white, blue and gray</p>
+                <p><input type="radio" name="question5" value="white, black and gray">B. white, black and gray</p>
+                <p><input type="radio" name="question5" value="purple, green and blue">C. purple, green and blue</p>
+                <p><input type="radio" name="question5" value="None of the above">D. None of the above</p>
+            </div>
+
+            <input id="btn" type="button" name="" value="Submit" onclick="check()">
+        </form>
+    </div>
+                <h6 style="text-align: right;"> dovlper@YuSh</h6>
+          </body>
+</html
